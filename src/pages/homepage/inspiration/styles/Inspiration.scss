@@ -1,0 +1,395 @@
+
+.swiper-section-inspiration .swiper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .swiper-section-inspiration  .swiper-nav-btns button {
+    background-color: transparent;
+  }
+  
+  .swiper-section-inspiration  .swiper-nav-btns button:nth-child(1) svg {
+    transform: rotate(180deg);
+  }
+  
+  .swiper-section-inspiration  .swiper-button-prev {
+    display: none;
+  }
+  
+  .swiper-section-inspiration  .swiper-button-next {
+    display: none;
+  }
+  .swiper-section-inspiration {
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  
+  .swiper-section-inspiration  .swiper-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+    .h4{
+        margin-left: 40px;
+    }
+    button:nth-child(1) img{
+        transform: rotate(180deg);
+    }
+  }
+  
+  .swiper-section-inspiration  .swiper-wrapper {
+    display: flex;
+    order: 2;
+  
+  }
+  
+  .swiper-section-inspiration  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: 386px!important;
+    margin-right: 181px;
+    padding: 0;
+    height: 618px;
+  }
+  .popup .swiper-slide{
+    height: 100%;
+  }
+  .swiper-section-inspiration  .hover-effect-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .swiper-section-inspiration  .hover-effect-div-inner{
+  opacity: 0;
+  transition: 0.3s;
+  }
+  
+  .swiper-section-inspiration  .hover-effect-div:hover .hover-effect-div-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #244B55;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+  }
+  .swiper-section-inspiration .hover-effect-div-inner .Look {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 20px;
+  }
+  .swiper-section-inspiration .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Przezroczyste tło */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  }
+  
+  .swiper-section-inspiration .popup {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: auto;
+  position: relative;
+  top: 18px;
+  width: 80%;
+  display: flex;
+  max-height: 600px;
+  }
+  .popup .swiper-slide {
+  height: 100%;
+  width: 100%!important;
+  display: flex;
+  }
+  
+  .swiper-section-inspiration  .popup .swiper {
+  padding: 0;
+  }
+  .swiper-section-inspiration .popup .swiper-slide {
+  width: 100%!important;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin: 0;
+  }
+  .imageSecition .swiper-nav-btns {
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+  .popup .imageSecition{
+  width: 75%;
+  max-height: 650px;
+  position: relative;
+  }
+  .PopupMainImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  .popup .info{
+  width: 25%;
+  padding: 38px;
+  }
+  .popup .BottomInfoSection{
+  padding-top: 67px;
+  padding-bottom: 80px;
+  }
+  
+  .imageSecition .swiper-nav-btns button:nth-child(1){
+  margin-left: 10px;
+  }
+  .imageSecition .swiper-nav-btns button:nth-child(2){
+  margin-right: 10px;
+  }
+  
+  .popup .imageSecition button{
+  background-color: #Fff;
+  }
+  
+  
+  .swiper-section-inspiration .close-button {
+      position: absolute;
+      top: -14px;
+      right: 10px;
+      background-color: #000;
+      border: none;
+      cursor: pointer;
+      height: 20px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+  }
+  .swiper-section-inspiration .popup-active {
+  overflow: hidden;
+  }
+  .swiper-section-inspiration .photowithtext  {
+  display: flex;
+  margin-top: 20px;
+  }
+  
+  .swiper-section-inspiration .photowithtext .photo {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  margin-right: 10px;
+  }
+  
+  .swiper-section-inspiration .foto .swiper-button-prev
+  {
+  display: block;
+  }
+  .swiper-section-inspiration .foto .swiper-button-next
+  {
+  display: block;
+  }
+  .swiper-section-inspiration .foto .swiper-slide {
+  width: 100%!important;
+  display: block;
+  margin-right: 0;
+  }
+  
+  .swiper-section-inspiration .foto .swiper{
+  margin: 0;
+  padding: 0;
+  }
+  
+  .foto .swiper-button-prev{
+  background: grey;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  }
+  .foto .swiper-button-next {
+  background: grey;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  }
+  .foto .swiper-button-prev:after {
+  content: 'prev';
+  font-size: 20px;
+  color: #ffff;
+  }
+  .swiper-button-next:after {
+  content: 'next';
+  font-size: 20px;
+  color: #ffff;
+  }
+  .foto .swiper-slide img {
+  width: 100%;
+  }
+  .ConfigurationUnder900{
+  display: none;
+  }
+  
+  .foto .swiper-nav-btns button:nth-child(1) {
+  position: absolute;
+  top: 267px;
+  z-index: 1;
+  background: grey;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  left: 10px;
+  }
+  
+  .foto .swiper-nav-btns button:nth-child(2) {
+  position: absolute;
+  top: 267px;
+  left: 93%!important;
+  z-index: 1;
+  background: grey;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  left: 10px;
+  }
+  
+  
+  .foto .swiper-nav-btns button:nth-child(1) svg {
+  fill: #fff;
+  stroke: #fff;
+  }
+  .foto .swiper-nav-btns button:nth-child(2) svg {
+  fill: #fff;
+  stroke: #fff;
+  }
+  
+  .TopInfoSection .body-small-smaller-third:nth-child(1)
+  {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  }
+  .popup-active {
+  overflow: hidden; 
+  }
+  
+  @media screen and (max-width: 1100px) {
+  
+  .swiper-section-inspiration .popup .foto {
+      width: 60%;
+  }
+  }
+  @media screen and (max-width: 900px) {
+    .inspiration .popup .swiper-slide {
+     flex-direction: column;
+    }
+    .swiper-section-inspiration .popup .PopupMainImage {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+  }
+  .imageSecition .swiper-nav-btns {
+    position: absolute;
+    top: 130px
+    ;}
+  
+  
+  .popup .swiper-slide{
+    flex-direction: column;
+  }
+  
+  .ConfigurationUnder900{
+    display: flex;
+  justify-content: center;
+  }
+  .ConfigurationUnder900 {
+    opacity: 1;
+  }
+  
+  .popup .imageSecition {
+    width: 100%;
+  }
+  .popup .info {
+    width: 100%;
+    position: relative;
+    max-width: 75%;
+  
+  }
+  
+  .popup .info .buttonwraper{
+    position: absolute;
+    top: 0px;
+    margin-top: 38px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  
+    }
+  
+  
+  
+  .swiper-section-inspiration .BottomInfoSection {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+  padding: 0;;
+  }
+  
+  .swiper-section-inspiration .info.expanded .BottomInfoSection {
+    max-height: 350px; 
+  }
+  
+  .swiper-section-inspiration .ConfigurationUnder900 {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: transparent;
+  
+  }
+  .popup .popuparrow{
+    width: 20px;
+    height: 20px;
+  }  
+  .popup .expanded .popuparrow {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+  }
+  
+  
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .popup .info .buttonwraper {
+      margin-left: -7%;
+  } 
+  
+  }
+    
+  @media screen and (max-width: 450px) {
+    .popup .info .buttonwraper {
+      margin-left: -12%;
+  } 
+  
+  }
+     
