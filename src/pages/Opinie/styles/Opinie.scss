@@ -1,0 +1,64 @@
+.Opinions .MainWrapper{
+    margin: auto;
+    width: 100%;
+    padding-bottom: 92px;
+    padding-top: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Opinions .StarsWrapper{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.WrapperOpinion {
+    display: flex;
+    margin-bottom: 40px;
+}
+.WrapperOpinionLeft{
+    width: 50%;
+    padding: 40px;
+    max-width: 637px;
+}
+.WrapperOpinionRight{
+    width: 50%;
+
+}
+
+.Opinions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.WrapperOpinionHeading {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.ParagraphOpinionHeading{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+.WrapperOpinion{
+    display: flex;
+    margin-bottom: 40px;
+    flex-direction: column-reverse;
+    padding: 0px 16px;
+}
+.WrapperOpinionRight {
+    width: 100%;
+    margin: auto;
+}
+.WrapperOpinionRight {
+    width: 100%;
+}
+.WrapperOpinionLeft {
+    width: 100%;
+    padding: 24px 0px 0px 0px;
+}
+.BigFoto{ 
+    width: 100%;
+}
+  }
