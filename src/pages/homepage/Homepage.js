@@ -3,6 +3,7 @@ import Renovation from "./renovation/Renovation";
 import Opinion from "./Opinion/Opinion";
 import Inspirattion from "./inspiration/Inspiration";
 import Featured from "./Featured/Featured";
+import FutureSection from "./FutureSection/FutureSection";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
        {/* <Hero />  
             <MostPopular /> */}
             <Inspirattion />
-            {/* <FutureSection /> */}
+            <FutureSection />
             <Renovation />
             <Opinion />
             <Featured />
