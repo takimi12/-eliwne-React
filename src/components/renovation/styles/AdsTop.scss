@@ -1,0 +1,65 @@
+.RenovationPageInfoAdvantages {
+  padding: 0px 40px;
+  .RenovationMainHeading {
+    text-align: center;
+    padding-top: 76px;
+    padding-bottom: 96px;
+}
+
+}
+
+.RenovationPageInfoParent .h6 {
+    margin-top: 16px;
+}
+
+.swiper-pagination {
+    bottom: 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 1px solid #68b8ff;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    width: 20px;
+    height: 6px;
+    transition: width 0.5s;
+    border-radius: 5px;
+    background: #68b8ff;
+    border: 1px solid transparent;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+
+.RenovationPageInfoAdvantages  .swiper-pagination{
+    opacity: 0;
+  }
+
+  .RenovationPageInfoAdvantages .swiper-pagination-bullet {
+  border: 1px solid #244B55;
+  background-color: transparent;
+  opacity: 1;
+}
+.RenovationPageInfoAdvantages .swiper-pagination-bullet-active {
+  border-radius: 4px;
+  background: #244B54;
+  width: 8px;
+  height: 8px;
+}
+  @media screen and (max-width: 1150px) {
+    .RenovationPageInfoAdvantages   .swiper-pagination-{
+      opacity: 1;
+    }
+  }
+
+ 

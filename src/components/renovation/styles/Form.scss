@@ -1,0 +1,104 @@
+.FormSection{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 40px;
+    padding-bottom: 96px;
+}
+
+.FormWrapperImage{
+    max-width: 430px;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+}
+
+
+
+.renovation-form {
+        display: flex;
+        flex-direction: column;
+  }
+
+  .form-title {
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+  
+.formgroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-input {
+    border: 1px solid  #AEB2B3;
+    background:  #FAFAFA;
+    width: 325px;
+    height: 48px;
+    margin-right: 10px;
+}
+.customtextarea{
+    border: 1px solid #AEB2B3;
+    background:  #FAFAFA;
+    width: 675px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.custom-button{
+    display: flex;
+padding: 14px 20px 14px 14px;
+align-items: center;
+gap: 10px;
+border: 1px solid #FAFAFA;
+background-color: transparent;
+color: #000; 
+}
+.input-wrapper{
+    margin-top: 20px;
+}
+
+
+.custom-file-input {
+    display: inline-block;
+  }
+  
+  .custom-file-input-button {
+    display: inline-block;
+    padding: 14px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-file-input-button-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-file-input-icon {
+    margin-right: 8px;
+  }
+  
+  .custom-file-input-text {
+    display: flex;
+    align-items: center;
+    color: #000;
+  }
+  
+
+  .custom-file-input-hidden {
+    display: none;
+  }
+  .custom-file-input{
+    margin-bottom: 40px;
+  }
+  .photo-text {
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+
+  textarea { 
+    resize: none;
+    }

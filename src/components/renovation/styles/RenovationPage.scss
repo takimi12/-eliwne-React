@@ -1,0 +1,33 @@
+.RenovationPage {
+    display: flex;
+    padding-right: 112px;
+    padding-left: 112px;
+    padding-top: 88px;
+    justify-content: space-around;
+}
+
+
+.RenovationPageParagraph {
+    padding-top: 36px;
+    padding-bottom: 54px;
+}
+
+.RenovationPageInfoParentWrapper {
+    gap: 0px 72px;
+    display: flex;
+    justify-content: center;
+}
+.RenovationPageInfoParent{
+    max-width: 254px;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+
+.RenovationPage .col-6 {
+width: 50%;
+}
+.RenovationPage .RenovationPageText {
+    max-width:438px;
+    padding: 110px 0px;
+}
