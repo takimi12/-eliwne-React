@@ -1,0 +1,275 @@
+h1 {
+    
+    font-size: 49px;
+    font-weight: 600;
+    line-height: 125%; /* 61.25px */
+    letter-spacing: -1.96px;
+    }
+    h2 {
+    
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 125%; /* 52.5px */
+    letter-spacing: -0.84px;
+    }
+    h3 {
+        
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+        letter-spacing: -0.64px;
+    }
+    h4 {
+        
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 32.4px */
+        letter-spacing: -0.54px;
+    }
+    h5{
+        font-family:"Plus Jakarta Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 28.6px */
+    letter-spacing: -0.44px;
+    }
+    h6 {
+        
+        font-size: 15px;
+        font-style: normal;
+        line-height: 145%; /* 21.75px */
+    }
+    .big-text {
+        color: #525555;
+    font-family:"Plus Jakarta Sans";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 25.5px */
+    letter-spacing: 0.17px;
+    }
+    .button
+    {
+        
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%; /* 21.75px */
+    letter-spacing: 0.15px;
+    }
+    p{
+        
+        font-size: 13px;
+        font-style: normal;
+        line-height: 145%; /* 18.85px */
+        letter-spacing: 1.3px;
+    }
+    label{
+        
+        font-size: 13px;
+        font-style: normal;
+        line-height: 145%; /* 18.85px */
+        letter-spacing: 1.3px;
+    }
+    
+    .button {
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        background-color: #1D3C44;
+        color: #fff;
+        padding-left: 32px;
+        padding-right: 32px;
+       
+    }
+    
+    button a {
+                color:  #FAFAFA;
+                
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 145%; /* 21.75px */
+                letter-spacing: 0.15px;
+        
+    }
+    
+    button {
+        max-width: 230px;
+        max-height: 64px;
+    }
+    
+    
+    .button:hover {
+            background-color:#162D33;
+        }
+        .button:active {
+            background-color:#162D33;
+        }
+    
+        @media screen and (max-width: 600px) {
+          .h4{
+            font-size: 20px;
+          } 
+            
+        }
+
+        .display {
+            color: #000;
+        
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 115%; 
+        letter-spacing: -2.88px;
+        }
+        .display-second{
+            color:  #FBF9F7;
+        text-align: right;
+        
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 115%; 
+        letter-spacing: -2.88px;
+        }
+        .h1 {
+            color: #000;
+        font-weight: 600;
+        
+        }
+        .h1-smaller {
+            color:  #252727;
+            font-weight: 600;
+        }
+        
+        .h2 {
+            color: #000;
+        font-weight: 600;
+        
+        }
+        .h3 {
+            color:  #252727;
+            font-size: 32px;
+            font-style: normal;
+        }
+        
+        .h4 {
+            color:  #252727;
+            font-weight: 600;
+        }
+        
+        .h5{
+            color:  #252727;
+        font-weight: 600;
+        }
+        
+        .h6 {
+            color:  #525555;
+            font-weight: 400;
+        }
+        .h6-500{
+            color:  #FAFAFA;
+                font-weight: 500;
+        }
+        .h6-600 {
+            color:  #252727;
+        
+        font-weight: 600;
+        }
+        .h6-600-second
+        {
+            color:  #244B55;
+        font-weight: 600;
+        }
+        .h6-600-third
+        {
+            color:  #252727;
+        font-weight: 600;
+        }
+        .h6-400-third
+        {
+            color:  #252727;
+        font-weight: 400;
+        }
+        .h6-300 {
+            color:  #525555;
+            font-weight: 400;
+        }
+        .h6-500{
+            color:  #E4E5E6;
+        font-weight: 500;
+        }
+        .h6-400-second{
+        color:  #3C3E3E;
+        font-weight: 400;
+        }
+        .big-text {
+            color: #525555;
+        font-family:"Plus Jakarta Sans";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; 
+        letter-spacing: 0.17px;
+        }
+        .body-small-bigger{
+            color:  #244B55;
+        font-weight: 800;
+        line-height: 130%; 
+        text-transform: uppercase;
+        }
+        .body-small-bigger-second{
+            color:  #3C3E3E;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .body-small-brown
+        {
+            color:  #93411F;
+        font-weight: 800;
+        text-transform: uppercase;
+        }
+        
+        .body-small
+        {
+            color: #252727;
+        font-weight: 400;
+        }
+        
+        .body-small-smaller
+        {
+            color:  #939899;
+            font-weight: 400;
+            line-height: 145%;
+        }
+        .body-small-smaller-second
+        {
+            color:  #3C3E3E;
+            font-weight: 400;
+            line-height: 145%; 
+        }
+        .body-small-bigger-third
+        {
+            color:  #252727;
+        font-weight: 600;
+        line-height: 145%; 
+        }
+        .body-small-smaller-third
+        {
+            color:  #525555;
+            font-weight: 400;
+        }
+        .eyebrowheader {
+            color: #FAFAFA;
+            font-weight: 800;
+        line-height: 130%; 
+        text-transform: uppercase;
+        }
+        
+        
+        

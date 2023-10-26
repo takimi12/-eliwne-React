@@ -1,0 +1,42 @@
+/* Reset styli */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, ul, ol, li,
+form, input, textarea, button,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* Normalizacja styli */
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: #244B55;
+  border: none;
+  cursor: pointer;
+  padding: 21px 30px;
+  color: #fff;
+}
+
+

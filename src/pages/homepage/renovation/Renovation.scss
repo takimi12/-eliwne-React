@@ -1,0 +1,71 @@
+.RenovationSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    
+  }
+  
+  .RenovationSection-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+  }
+  
+  .RenovationSection-text {
+    max-width: 50%;
+  }
+  
+  .RenovationSection-image {
+  max-width: 50%;
+  }
+  
+  .RenovationSection-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .RenovationSection-heading {
+    margin-bottom: 20px;
+  }
+  
+  .RenovationSection-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+ .RenovationSection-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .RenovationSection-content {
+      flex-direction: column-reverse;
+    padding: 0;    
+    }
+        .RenovationSection-image {
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 40px;
+      }
+        .RenovationSection-text {
+          max-width: 100%;
+      }
+  }
+  @media screen and (max-width: 1050px) {
+    .display {
+     font-size: 42px; 
+    }
+       
+  }
+  @media screen and (max-width: 600px) {
+    .RenovationSection {
+      padding: 80px 16px;
+  }
+       
+  }

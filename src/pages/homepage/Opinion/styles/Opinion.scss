@@ -1,0 +1,129 @@
+
+.client-opinion-wrapper h4 {
+    font-weight: 400;
+    color: #252729;
+  }
+  .client-opinion-wrapper h4 span
+  {
+    font-weight: 500;
+    color: #939899;
+  }
+  .sign {
+    display: flex;
+    align-items:center;
+  }
+  .Clients {
+    padding: 40px;
+  }
+  
+  .Clients .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Clients .top .left .h4 {
+  margin-bottom: 16px;
+  }
+  
+  .Clients .client-opinion-parent {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .Clients .client-opinion {
+    margin-top: 40px;
+  }
+  
+  .Clients .client-opinion-wrapper {
+    background-color: #F4F5F5;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .Clients .client-opinion-wrapper .star {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Clients .client-opinion-wrapper .star img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .Clients .client-opinion-wrapper h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .Clients .client-opinion-wrapper p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .Clients .client-opinion-wrapper .sign {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Clients .client-opinion-wrapper .sign img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .Clients .client-opinion-wrapper .sign h4 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .Clients .client-opinion-wrapper .sign span {
+    font-size: 14px;
+    color: #888;
+    margin-left: 5px;
+  }
+  
+  .Clients  .h6::after
+  
+    {
+      content: '';
+      display: block;
+    width: 100%;
+      height: 1px;
+      opacity: 1;
+      background: rgb(37, 39, 39);
+      transition: all 0.3s ease-in-out 0s;
+      position: relative;
+      bottom: -0.375rem;
+  }
+  
+  .Clients .h6:hover::after
+  
+    {
+      width: 0px;
+      height: 1px;
+      opacity: 0;
+      background: rgb(37, 39, 39);
+      transition: all 0.3s ease-in-out 0s;
+      position: relative;
+      bottom: -0.375rem;
+  }
+  .Clients .body-small-bigger{
+    margin-left: 10px;
+  }
+  
+  .Clients .swiper-backface-hidden .swiper-slide {
+    width: 446.667px!important;
+  }
+  .Clients .swiper-wrapper{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  @media screen and (max-width: 600px) {
+   .Clients{
+    padding: 16px;
+   }
+       
+  }
