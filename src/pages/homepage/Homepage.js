@@ -4,13 +4,13 @@ import Opinion from "./Opinion/Opinion";
 import Inspirattion from "./inspiration/Inspiration";
 import Featured from "./Featured/Featured";
 import FutureSection from "./FutureSection/FutureSection";
-
+import Hero from "./Hero/Hero";
 const Home = () => {
   return (
     <>
 
-       {/* <Hero />  
-            <MostPopular /> */}
+       <Hero />  
+            {/* <MostPopular /> */}
             <Inspirattion />
             <FutureSection />
             <Renovation />

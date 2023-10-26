@@ -1,0 +1,38 @@
+.Hero {
+   
+    height: 850px;
+    background-size: cover;
+    background-image: url("../../../../static/HomePage/Hero/Hero.png");
+    margin-bottom: 64px;
+  }
+  .Hero .text-center-setting {
+    max-width: 650px;
+    padding-left: 192px;
+  }
+
+  
+  .Hero .text-center{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+
+}
+
+.Hero .display-second{
+  padding-top: 8px;
+  padding-bottom: 32px;
+  text-align: left;
+}
+
+@media screen and (max-width: 1300px) {
+  .Hero .text-center-setting {
+     padding-left: 80px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Hero .display-second {
+ font-size: 52px;  }
+}
