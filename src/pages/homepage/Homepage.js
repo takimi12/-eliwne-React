@@ -5,12 +5,13 @@ import Inspirattion from "./inspiration/Inspiration";
 import Featured from "./Featured/Featured";
 import FutureSection from "./FutureSection/FutureSection";
 import Hero from "./Hero/Hero";
+import MostPopular from "./MostPopular/MostPopular";
 const Home = () => {
   return (
     <>
 
        <Hero />  
-            {/* <MostPopular /> */}
+            <MostPopular />
             <Inspirattion />
             <FutureSection />
             <Renovation />
