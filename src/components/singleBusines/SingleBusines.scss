@@ -1,0 +1,101 @@
+.ContentBusiness {
+    padding: 0px 40px;
+}
+.BusinesContentWrapper {
+    display: flex;
+    margin-bottom: 40px;
+}
+.BusinesContentWrapper:nth-child(even) {
+    flex-direction: row-reverse;
+   }
+.ForBusinessTitleText .MainHeading{
+    padding-top: 64px;
+    padding-bottom: 20px;
+}
+.ForBusinessTitleText .MainParagraph{
+ padding-bottom: 120px;
+}
+
+.ForBusinessTitleText{
+    max-width: 440px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.ImageContent {
+ width: 50%;    
+}
+.ImageContent .Image{
+width: 100%;
+object-fit: cover;
+}
+.TextContent {
+width: 50%;
+}
+.TextConentHeading {
+    padding-top: 115px;
+    padding-bottom: 20px;
+}
+
+.TextContentInner{
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+
+@media screen and (max-width: 990px) {
+   .ContentBusiness{
+    padding: 0;
+   }
+   .BusinesContentWrapper {
+    flex-direction: column;
+}
+.ImageContent{
+    width: 100%;
+}
+.TextContent{
+    width: 100%;
+}
+.BusinesContentWrapper:nth-child(even) {
+    flex-direction: column;
+}
+.TextContentInner{
+    padding: 16px;
+}
+.TextConentHeading {
+    padding: 24px 0px;
+}
+.TextConentParagraph{
+    margin-bottom: 80px;
+}
+   
+  }
+  @media screen and (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .Contact{
+        padding: 0px 10px;
+    }
+    .formgroup {
+flex-direction: column;
+
+    }
+    .contact-form{
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .Contact{
+        padding: 0px 10px;
+    }
+    .formgroup {
+flex-direction: column;
+
+    }
+    .contact-form{
+        width: 90%;
+    }
+  }
