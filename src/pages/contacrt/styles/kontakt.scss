@@ -1,0 +1,193 @@
+
+.Contact{
+    display: flex;
+    padding: 0px 40px 123px 40px;
+    justify-content: space-evenly;
+    margin-top: 144px;
+}
+.Contact .ContactDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+.ContactDetailsSmall{
+    display: flex;
+    align-items: flex-start;
+    padding: 27px 0px;
+    width: 100%;
+}
+.ContactDetailsSmall .Image {
+    margin-right: 12px;
+}
+
+.Anotherparagraph{
+    max-width:325px;
+    text-align:left;
+}
+.ContactParagraphDetails{
+    margin-bottom: 4px;
+}
+.Contact .customtextarea {
+    height: 117px;
+}
+
+.Contact input {
+    margin-bottom: 17px;
+    margin-top: 8px;
+}
+.Contact textarea {
+    margin-bottom: 47px;
+    margin-top: 8px;
+}
+ .customtextarea {
+    background-color: #fff; 
+    outline: NONE;
+  }
+
+
+.error .custom-input {
+    border: 1px solid red; 
+    background-color: #ffebee; 
+        margin-bottom: 4px;
+  }
+  
+  .error .input-label {
+    color: red; 
+  }
+  .error .textarea-label {
+    color: red; 
+  }
+  .error .textarea-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+  
+  .error .textarea-container {
+    border: 1px solid red; 
+    background-color: #ffebee; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+ .error  .customtextarea {
+   border: none;
+    background-color: #ffebee; 
+  }
+
+  
+
+  .custom-input:invalid {
+    box-shadow: none;
+  }
+  
+  .customtextarea:invalid {
+    box-shadow: none;
+  }
+  @media screen and (max-width: 768px) {
+    .Contact {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Contact .ContactDetailsWrapper {
+      margin-bottom: 40px;
+      .contactMainHeading {
+       width: 100%;
+       text-align: left;
+      }
+    }
+  
+    .ContactDetailsSmall {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 0;
+  
+    }
+  
+    .ContactDetailsSmall .Image {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+  
+    .Contact .customtextarea {
+      width: 100%;
+    }
+  
+    .error .custom-input,
+    .error .textarea-container,
+    .error .customtextarea {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .Contact {
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .Contact {
+flex-direction: column;
+    }
+    .formgroup {
+        gap: 20px;
+        display: flex;
+        width: 100%;
+    }
+    .input-wrapper {
+        width: 100%;
+    }
+    .Contact input {
+        margin-bottom: 17px;
+        margin-top: 8px;
+        width: 100%;
+    }
+    .Contact .customtextarea {
+        width: 100%;
+    }
+    .Contact .custom-submit-button {
+        width: 100%;
+        max-width: 100%;
+    }
+    .Contact .details {
+      max-width: 200px;
+    }
+    .Contact .ContactDetailsSmall {
+      min-width: 170px;
+    }
+    .Contact .ContactDetailsSmallAnother {
+      padding: 48px 0px;
+      min-width: 170px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .Contact{
+        padding: 0px 10px;
+    }
+    .formgroup {
+flex-direction: column;
+
+    }
+    .contact-form{
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .Contact{
+        padding: 0px 10px;
+    }
+    .formgroup {
+flex-direction: column;
+
+    }
+    .contact-form{
+        width: 90%;
+    }
+  }

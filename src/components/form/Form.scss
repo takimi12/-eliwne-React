@@ -1,0 +1,140 @@
+.Contact input {
+  margin-bottom: 17px;
+  margin-top: 8px;
+}
+.Contact textarea {
+  margin-bottom: 47px;
+  margin-top: 8px;
+}
+.customtextarea {
+  background-color: #fff; 
+  outline: NONE;
+}
+
+
+.error .custom-input {
+  border: 1px solid red; 
+  background-color: #ffebee; 
+      margin-bottom: 4px;
+}
+
+.error .input-label {
+  color: red; 
+}
+.error .textarea-label {
+  color: red; 
+}
+.error .textarea-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.error .textarea-container {
+  border: 1px solid red; 
+  background-color: #ffebee; 
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.error  .customtextarea {
+ border: none;
+  background-color: #ffebee; 
+}
+
+
+
+.custom-input:invalid {
+  box-shadow: none;
+}
+
+.customtextarea:invalid {
+  box-shadow: none;
+}
+.renovation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+padding-top: 72px;
+padding-bottom: 40px;
+}
+
+.formgroup {
+display: flex;
+justify-content: space-between;
+}
+
+.custom-input {
+border: 1px solid  #AEB2B3;
+background:  #FAFAFA;
+width: 325px;
+height: 48px;
+margin-right: 10px;
+}
+.customtextarea{
+border: 1px solid #AEB2B3;
+background:  #FAFAFA;
+width: 675px;
+height: 48px;
+margin-right: 10px;
+}
+
+.custom-button{
+display: flex;
+padding: 14px 20px 14px 14px;
+align-items: center;
+gap: 10px;
+border: 1px solid #FAFAFA;
+background-color: transparent;
+color: #000; 
+}
+.input-wrapper{
+margin-top: 20px;
+}
+
+
+.custom-file-input {
+display: inline-block;
+}
+
+.custom-file-input-button {
+display: inline-block;
+padding: 14px 14px;
+background-color: #f5f5f5;
+border: 1px solid #ccc;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.custom-file-input-button-inner {
+display: flex;
+align-items: center;
+}
+
+.custom-file-input-icon {
+margin-right: 8px;
+}
+
+.custom-file-input-text {
+display: flex;
+align-items: center;
+color: #000;
+}
+
+
+.custom-file-input-hidden {
+display: none;
+}
+.custom-file-input{
+margin-bottom: 40px;
+}
+.photo-text {
+margin-top: 20px;
+margin-bottom: 8px;
+}
+
+
+textarea { 
+resize: none;
+}

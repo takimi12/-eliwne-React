@@ -15,6 +15,15 @@
 @import url('./pages/homepage/Hero/styles/Hero.scss');
 @import url('./pages/homepage/MostPopular/styles//MostPopular.scss');
 
+//Pages
+
+@import url('./pages/contacrt/styles//kontakt.scss');
+
+
+//Components
+@import url('./components/form/Form.scss');
+
+
 body {
 font-family: 'Plus Jakarta Sans',
 }
