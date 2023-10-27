@@ -1,0 +1,132 @@
+@import './ProductPageAccordion.scss';
+@import './ProductPageFlorence.scss';
+@import './ProductPagePopUp.scss';
+@import './ProductTab.scss';
+@import './Guarante.scss';
+@import './Delivery.scss';
+
+.ProductPage{
+    padding: 40px;
+}
+
+.ProductPageWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.ProductPageWrapper .ImageWrapper {
+    width: 55%;
+}
+.ProductPage .InfoWrapper {
+    width: 25%;
+    position: relative;
+}
+
+.StickyPosition{
+    position: sticky;
+    top: 69px;
+}
+
+.ProductPage .ImageWrapper .ProductPageImage {
+    width: 100%;
+}
+
+.ProductPage .MainInfo {
+    display: flex;
+    margin: 12px 0px;
+    align-items: center;
+    gap: 15px;
+}
+.ProductPage .MainDesc {
+    padding-bottom: 40px;
+}
+.ProductPage .WrapperSquare {
+    display: flex;
+    margin-top: 8px;
+}
+.ProductPage .greysquare{
+    border-color: rgb(206, 212, 218);
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.ProductPage .MainPrize {
+    margin-top: 56px;
+    margin-bottom: 20px;
+}
+.ProductPage .delivery {
+    margin-top: 12px;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ContactDetailsWrapper{
+    display: flex;
+}
+.ContactDetailsWrapper .delivery{
+margin-right: 10px;
+}
+.size-parent{
+    padding: 8px 16px;
+align-items: flex-start;
+gap: 10px;
+border: 1px solid  #787E80;
+display: flex;
+margin-right: 8px;
+}
+.wrapper-small-product{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1350px) {
+    .wrapper-small-product
+{
+    flex-direction:column;
+}
+  }
+
+@media screen and (max-width: 1200px) {
+    .ProductPageWrapper{
+        gap: 40px;
+    }
+    .ProductPageWrapper .ImageWrapper {
+        width: 50%;
+    }
+    .ProductPageWrapper .InfoWrapper {
+        width: 50%;
+    }
+  }
+@media screen and (max-width: 992px) {
+   
+    .ProductPageWrapper .ImageWrapper {
+        width: 60%;
+    }
+    .ProductPageWrapper .InfoWrapper {
+        width: 40%;
+    }
+  }
+@media screen and (max-width: 992px) {
+   
+    .ProductPageWrapper  {
+        display: flex;
+        flex-direction: column;
+    }
+    .ProductPageWrapper .ImageWrapper {
+      width: 100%;
+    }
+    .ProductPageWrapper .InfoWrapper {
+        width: 100%;
+    }
+    .ProductPageWrapper button {
+        width: 100%;
+    }
+
+  }

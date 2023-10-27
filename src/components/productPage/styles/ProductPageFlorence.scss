@@ -1,0 +1,62 @@
+.ProductPageFlorence {
+    display: flex;
+    padding-left: 104px;
+    overflow: hidden;
+    padding-right: 40px;
+    padding-bottom: 64px;
+    justify-content: space-between;
+}
+.ProductPageFlorence .MainWrapper {
+max-width: 60%;
+}
+
+.ProductPageFlorence .Photo {
+    max-width: 690px;
+}
+.Main-Photo{
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProductPageFlorence .MainWrapperText{
+    padding-right: 104px;
+    margin-top: 8px;
+    margin-bottom: 36px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 1100px) {
+   .ProductPageFlorence{
+    flex-direction: column-reverse;
+    padding: 40px;
+   }
+   .ProductPageFlorence .MainWrapperTex{
+    padding: 0;
+   }
+   .ProductPageFlorence .MainWrapper {
+    max-width: 100%;
+}
+.ProductPageFlorence .MainPhoto
+{
+    width: 100%;
+    object-fit: cover;
+}
+  }
+@media screen and (max-width: 800px) {
+.ProductPageFlorence {
+    padding: 50px 0px 0px 0px;
+}
+    .ProductPageFlorence .display{
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 52.5px */
+    letter-spacing: -0.84px;
+}
+.ProductPageFlorence .MainWrapperText {
+    padding: 40px;
+}
+  }

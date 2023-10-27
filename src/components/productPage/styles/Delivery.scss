@@ -1,0 +1,42 @@
+
+.Delivery .ModalContentMainHeading {
+    padding-top: 64px;
+    padding-bottom: 41px;
+}
+.Delivery .ModalTabs {
+    display: flex;
+    flex-direction: row;
+}
+.Delivery  .col-6:nth-child(2) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.Delivery  .col-6:nth-child(1) {
+    width: 50%;
+    flex-direction: column;
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .Delivery .ModalTabs {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .Delivery .ModalTabs .col-6{
+             width: 90%;
+             text-align: center;;
+    }
+    .delivery-package{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+
+
+
+}
