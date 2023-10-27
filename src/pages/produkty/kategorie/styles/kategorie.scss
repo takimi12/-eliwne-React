@@ -1,0 +1,48 @@
+@import "../subkategorie/styles/subkategorie.scss";
+.ProductPageOneCategory {
+    padding: 0px 40px;
+    margin-bottom: 72px;
+}
+
+.ProductPageOneCategory .location {
+    gap: 10px;
+    display: flex;
+    margin-top: 31px;
+    margin-bottom: 8px;
+}
+.ProductPageOneCategory ul {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ProductPageOneCategory ul li  {
+width: 48%;
+}
+.ProductPageOneCategory ul li img  {
+width: 100%;
+max-width: 440px;
+height: 330px;
+margin-bottom: 10px;
+}
+
+ .SwiperCategoryOneProduct .navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+@media screen and (max-width: 1000px) {
+    .ProductPageOneCategory ul li
+    {
+    width: 100%;
+    }
+    .ProductPageOneCategory ul {
+        flex-wrap: wrap;
+    }
+    .ProductPageOneCategory ul li img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 400px;
+    object-fit: contain;
+    }
+  }

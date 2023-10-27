@@ -8,6 +8,9 @@ import Opinie from "./pages/Opinie/Opinie";
 import Renowacja from "./pages/renowacja/Renowacja";
 import Produkt from "./pages/ProductPage/Products";
 
+import Produkty from "./pages/produkty/Products";
+import Kategorie from "./pages/produkty/kategorie/Kategorie";
+import Subkategorie from "./pages/produkty/kategorie/subkategorie/Subkategorie";
 const App = () => {
   return (
     <>
@@ -17,6 +20,10 @@ const App = () => {
         <Route path='/' element={<Homepage />} />
         <Route path='/Renowacja' element={<Renowacja />} />
         <Route path='/Produkt' element={<Produkt />} />
+        <Route path='/Produkty' element={<Produkty />} />
+        <Route path='/produkty/kategorie' element={<Kategorie />} />
+        <Route path='/produkty/kategorie/subkategorie' element={<Subkategorie />} />
+
         <Route path='/Opinie' element={<Opinie />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Biznes' element={<Biznes />} />

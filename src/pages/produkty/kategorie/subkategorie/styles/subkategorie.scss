@@ -1,0 +1,99 @@
+.HeroCategorySub{
+    margin-bottom: 30px;
+    width: 100%;
+    height: 192px;
+    position: relative;
+    max-width: 100%;
+}
+
+
+.HeroCategorySub .location{
+    padding: 40px;
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    }
+.HeroCategorySub .location svg path {
+    fill: #fff;
+}    
+.HeroCategorySub .location svg path {
+    height: 20px;
+}    
+.body-small-smaller{
+    color: #FAFAFA;
+}
+.HeroCategorySub .body-small {
+        color: #fff;
+}
+.HeroSubImageWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    z-index: 0;
+}
+.HeroCategorySubProduct
+{
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+}
+.SwiperCategorySubProduct{
+    padding: 0px 40px;
+}
+.SwiperCategorySubProduct .swiper
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.SwiperCategorySubProduct .navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.SwiperCategorySubProduct  .swiper-nav-btns button {
+    background-color: transparent;
+}
+.SwiperCategorySubProduct  .swiper-nav-btns button:nth-child(1) svg {
+    transform: rotate(180deg);
+}
+
+.SwiperCategorySubProduct .h6-600-third{
+    margin-top: 10px;
+}
+.SwiperCategorySubProduct .swiper-wrapper{
+
+transform: translate3d(0px, 0px, 0px)!important;
+}
+
+
+@media screen and (max-width: 800px) {
+    .HeroCategorySubProduct {
+        padding: 40px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .SwiperCategorySubProduct .navigation .h4
+    {
+    font-size: 20px;
+    }
+    .SwiperCategorySubProduct .navigation {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .SwiperCategorySubProduct button {
+        padding: 10px 10px;
+    }
+  }
+
+ 
