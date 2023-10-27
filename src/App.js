@@ -11,22 +11,22 @@ import Produkt from "./pages/ProductPage/Products";
 import Produkty from "./pages/produkty/Products";
 import Kategorie from "./pages/produkty/kategorie/Kategorie";
 import Subkategorie from "./pages/produkty/kategorie/subkategorie/Subkategorie";
+import NotFound from "./pages/notFound/NotFound";
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-
         <Route path='/' element={<Homepage />} />
         <Route path='/Renowacja' element={<Renowacja />} />
         <Route path='/Produkt' element={<Produkt />} />
         <Route path='/Produkty' element={<Produkty />} />
         <Route path='/produkty/kategorie' element={<Kategorie />} />
         <Route path='/produkty/kategorie/subkategorie' element={<Subkategorie />} />
-
         <Route path='/Opinie' element={<Opinie />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Biznes' element={<Biznes />} />
+        <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
       <Footer />
