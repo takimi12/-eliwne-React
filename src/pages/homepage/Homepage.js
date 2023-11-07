@@ -6,17 +6,22 @@ import Featured from "./Featured/Featured";
 import FutureSection from "./FutureSection/FutureSection";
 import Hero from "./Hero/Hero";
 import MostPopular from "./MostPopular/MostPopular";
+import Series from "../../components/series/Series";
+import MobileMenu from "../../components/header/MobileMenu";
 const Home = () => {
   return (
     <>
 
+
        <Hero />  
             <MostPopular />
+            {/* <Series /> */}
             <Inspirattion />
             <FutureSection />
             <Renovation />
             <Opinion />
             <Featured />
+    
     </>
   );
 };

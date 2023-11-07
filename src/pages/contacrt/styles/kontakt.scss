@@ -153,9 +153,11 @@ flex-direction: column;
     }
     .Contact .details {
       max-width: 200px;
+      min-width: 180px;
     }
     .Contact .ContactDetailsSmall {
       min-width: 170px;
+      justify-content: center;
     }
     .Contact .ContactDetailsSmallAnother {
       padding: 48px 0px;

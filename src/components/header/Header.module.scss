@@ -1,0 +1,116 @@
+/** Podstawowe ustawienie **/
+
+.defaultHeader {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    .menuWhite{
+    a{
+        color:#000;
+    } 
+    svg {
+        path{
+        fill: #000;
+        }
+    }
+    
+    }
+    @media screen and (max-width: 801px) {
+      display: none;
+    }
+    .navigation {
+        display: flex;
+        padding: 20px 40px;
+         }
+        }
+/*** Scroll menu ***/
+
+        .fixed{
+            position: sticky;
+            top: 0px;
+            background: #fff;
+            z-index: 11;
+        
+        }
+
+
+/** Menu desktop 
+-HomePage
+-Binzes
+*/
+    .topMenu{
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+       margin-left: 50px;
+           ul{
+           display: flex;
+           li {
+               padding: 10px;
+               a{
+                   color: #fff;
+               }
+           }
+       }
+       
+    }
+  
+/** Menu mouseenter **/
+.multiMenu{
+   border-top: solid 1px;
+   position: absolute;
+   width: 100%;
+   background: #fff;
+}
+.secondLevel{
+    display: flex;
+    .submenu{
+        padding: 10px;
+    }
+    .secondLevelChild{
+        min-width: 20%;
+        border-right: solid 2px black;
+        padding: 40px;
+    }
+    ul{
+        li{
+            padding: 10px;
+        }
+    }
+    .thirdLevel{
+        display: flex;
+        min-width: 30%;
+        border-right: solid 1px black;
+        padding: 40px;
+    }
+}
+
+
+
+
+/** Menu desktop sticky
+-homepage
+-biznes
+**/
+.fixed{
+    .menuBlack{
+        color: red;
+        svg{
+            path{
+                fill:black;
+            }
+        }
+        a{
+            color:#000;
+        }
+
+    }
+  
+}
+
+/** Menu mobile sticky
+-homepage
+-biznes
+**/

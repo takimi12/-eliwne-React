@@ -1,35 +1,49 @@
 import React from "react";
-import { BrowserRouter as Router, Route,  Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Homepage from "./pages/homepage/Homepage";
-import Contact from "./pages/contacrt/Contact";
+import KategorieProduktów from "./pages/kategorieProduktów/Products";
+import SubKategorie from "./pages/kategorieProduktów/subKategorie/Kategorie";
+import ListaProduktów from "./pages/kategorieProduktów/subKategorie/productList/ProductList";
+import ProduktDetail from "./pages/kategorieProduktów/subKategorie/productList/ProductPage/Products";
+import NotFound from "./pages/notFound/NotFound";
+import { CategoryProvider } from './CategoryContext';
+import Header from "./components/header/Header";
+
+// pages
+import Renowacja from "./pages/renowacja/Renowacja";
 import Biznes from "./pages/biznes/Biznes";
 import Opinie from "./pages/Opinie/Opinie";
-import Renowacja from "./pages/renowacja/Renowacja";
-import Produkt from "./pages/ProductPage/Products";
+import Kontakt from "./pages/contacrt/Contact";
+import MobileMenu from "./components/header/MobileMenu";
 
-import Produkty from "./pages/produkty/Products";
-import Kategorie from "./pages/produkty/kategorie/Kategorie";
-import Subkategorie from "./pages/produkty/kategorie/subkategorie/Subkategorie";
-import NotFound from "./pages/notFound/NotFound";
+
+
 const App = () => {
   return (
     <>
+
+
+       <CategoryProvider>
       <Router>
+      <Header />
+
         <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/Renowacja' element={<Renowacja />} />
-        <Route path='/Produkt' element={<Produkt />} />
-        <Route path='/Produkty' element={<Produkty />} />
-        <Route path='/produkty/kategorie' element={<Kategorie />} />
-        <Route path='/produkty/kategorie/subkategorie' element={<Subkategorie />} />
-        <Route path='/Opinie' element={<Opinie />} />
-        <Route path='/Contact' element={<Contact />} />
-        <Route path='/Biznes' element={<Biznes />} />
-        <Route path="/*" element={<NotFound />} />
+  <Route path='/produkty' element={<KategorieProduktów />} />
+  <Route path='/produkty/:tytul' element={<SubKategorie />} />
+  <Route path='/produkty/:tytul/:tytul' element={<ListaProduktów />} />
+  <Route path='/produkt/:tytul' element={<ProduktDetail />} />
+  <Route path='/renowacja' element={<Renowacja />} />
+  <Route path='/biznes' element={<Biznes />} />
+  <Route path='/opinie' element={<Opinie />} />
+  <Route path='/kontakt' element={<Kontakt />} />
+  <Route path="/*" element={<NotFound />} />
         </Routes>
+        
       </Router>
       <Footer />
+      </CategoryProvider>
     </>
   );
 };

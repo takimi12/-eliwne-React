@@ -1,0 +1,60 @@
+.HeroCategorySub{
+    padding: 40px;
+    margin-top: 50px;
+    
+    @media screen and (max-width: 801px) {
+      display: none;
+    }
+    .location {
+        display: flex;
+    }
+    .breadcrumb{
+        padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    }
+.color {
+    color:#000;
+}
+
+}
+
+.newbackground {
+    background-color: red /* Twój wybrany kolor tła */
+  }
+
+  .active{
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+  }
+  .image{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top:-10px;
+  }
+  .none {
+    display: none;
+  }
+
+  .locationProp{
+    position: absolute;
+    top: 70%;
+    display: flex;
+    padding-left: 40px;
+    a {
+        color: #fff!important;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+     
+    
+    path {
+        fill: #fff!important;
+    }
+}
+  }

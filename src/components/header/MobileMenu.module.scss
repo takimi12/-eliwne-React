@@ -1,0 +1,209 @@
+.mobileMenu {
+  padding: 40px 16px;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s;
+
+
+
+  @media screen and (min-width: 801px) {
+    display: none!important;
+  }
+
+}
+
+.position{
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  .menuBlack {
+    svg {
+      path{
+        fill: #000;
+      }
+    }
+  
+  }
+}
+
+
+/*** fixed menu
+-homepage
+-biznes
+***/
+.fixed{
+  .menuBlack {
+    svg {
+      path{
+        fill: #000;
+      }
+    }
+  }
+}
+.fixed{
+  .menuWhite {
+    svg {
+      path{
+        fill: #000;
+      }
+    }
+  }
+}
+
+
+
+
+/**********/
+
+
+
+
+.fixed{
+  position: sticky;
+  top: 0px;
+  background: #fff;
+  z-index: 11;
+.position{
+  background-color: #fff;
+}
+
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .subCategoryMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+
+}
+
+.hamburgerMenu {
+  z-index: 1;
+    }
+
+
+.mobileCategory {
+  width: 100%;
+  padding: 16px;
+  h5 {
+    color: #000;
+  }
+  .mobileCategory-26 {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobileCategoryMenu {
+    padding: 24px 0;
+  }
+}
+
+.mobileSubCategory {
+  padding: 40px;
+
+  .mobileSubCategoryMenu {
+    padding: 24px 0;
+  }
+
+ 
+}
+
+.SubCategoryProducts {
+  margin-top: 55px;
+  margin-bottom: 30px;
+
+}
+.MenuLeftSideParentActive{
+  min-height: 550px;
+  background: #fff;
+    top: -150px;
+}
+.MenuLeftSideParent{
+   
+    padding: 16px;
+    overflow: hidden;
+    position: relative;
+
+
+    @media screen and (min-width: 801px) {
+      display: none;
+    }
+
+    .subCategoryBack {
+        position: absolute;
+        animation: slideOut 0.3s ease-in-out; /* Domyślnie wyjście */
+        left: 100%;
+        padding: 16px;
+        .backArrow{
+            display: flex;
+            align-items: center;
+            margin-bottom: 53px;
+        }
+        .subCategoryBackArrow {
+          margin-right: 12px;
+          color: #000;
+          
+        }
+        h3 {
+          color: #000;
+        }
+        .subCategoryProdukty{
+            margin-bottom: 28px;
+            color: #000;
+        }
+        a {
+          color: #000;
+        }
+      }
+
+
+
+
+
+  /* Tworzenie animacji wejścia */
+@keyframes slideIn {
+    from {
+      left: 100%; /* Początkowe położenie - poza ekranem */
+    }
+    to {
+      left: 0; /* Końcowe położenie - na ekranie */
+    }
+  }
+  
+  /* Tworzenie animacji wyjścia */
+  @keyframes slideOut {
+    from {
+      left: 0; /* Początkowe położenie - na ekranie */
+    }
+    to {
+      left: 100%; /* Końcowe położenie - poza ekranem */
+    }
+  }
+  
+  .mobileCategory {
+    position: absolute;
+    animation: slideOut 0.3s ease-in-out; /* Domyślnie wyjście */
+    left: 100%;
+    a{
+      color: #000;
+    }
+  }
+  
+  .active {
+    animation: slideIn 0.3s ease-in-out; /* Wejście po aktywacji klasy 'active' */
+    left: 0;
+    margin-top: 150px;
+  }
+  
+}
+
+.MiniLogo {
+  padding-top: 40px;
+  position: absolute;
+}
