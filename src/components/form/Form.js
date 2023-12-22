@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import ContactUs from "./formtest";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   // Stan i funkcje walidacji początkowe
@@ -17,6 +19,7 @@ const ContactForm = () => {
   const [emailTouched, setEmailTouched] = useState(false);
   const [telephoneTouched, setTelephoneTouched] = useState(false);
   const [messageTouched, setMessageTouched] = useState(false);
+  const form = useRef();
 
   // Funkcje obsługujące zmianę wartości pól
   const handleNameChange = (e) => {
@@ -114,26 +117,52 @@ const ContactForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Wywołanie funkcji walidacji przed przesłaniem
     handleNameBlur();
     handleSurnameBlur();
     handleEmailBlur();
     handleTelephoneBlur();
     handleMessageBlur();
-
+    emailjs.sendForm('service_cb7mkz8', 'template_rycht7c', form.current, 'p8JsVRCVhWp7ns37L')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+  
     // Sprawdzenie, czy nie ma żadnych błędów walidacji
     if (!nameError && !surnameError && !emailError && !telephoneError && !messageError) {
-      // Tutaj dodaj kod do przesłania formularza
+      // Dane są poprawne, można je zbierać
+      const formData = {
+        name,
+        surname,
+        email,
+        telephone,
+        message,
+      };
+
+      setName("");
+      setEmail("");
+      setSurname("");
+      setTelephone("");
+      setMessage("");
+      // Tutaj możesz przesłać dane na serwer, zapisać w bazie danych lub wykonać inne operacje
       console.log("Formularz przesłany poprawnie!");
+      console.log("Dane formularza:", formData);
     }
   };
 
+
+  
+  
+  
+  
   
 
   return (
     <>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} ref={form}>
           <h2 className="ContactFormHeading">Wyceń renowację swoich grzejników!</h2>
           <div className="formgroup">
             <div className={`input-wrapper ${nameError ? "error" : ""}`}>
@@ -243,6 +272,7 @@ const ContactForm = () => {
             Wyślij zapytanie
           </button>
         </form>
+      
     </>
   );
 };
