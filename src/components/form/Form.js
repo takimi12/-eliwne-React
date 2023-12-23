@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
-import ContactUs from "./formtest";
 import emailjs from '@emailjs/browser';
+import styles from './Form.scss';
+import { Button, Modal } from 'antd';
 
 const ContactForm = () => {
   // Stan i funkcje walidacji początkowe
@@ -20,6 +21,27 @@ const ContactForm = () => {
   const [telephoneTouched, setTelephoneTouched] = useState(false);
   const [messageTouched, setMessageTouched] = useState(false);
   const form = useRef();
+  const [showPopup, setShowPopup] = useState(false);
+
+  
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  
+  
 
   // Funkcje obsługujące zmianę wartości pól
   const handleNameChange = (e) => {
@@ -117,51 +139,51 @@ const ContactForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Wywołanie funkcji walidacji przed przesłaniem
     handleNameBlur();
     handleSurnameBlur();
     handleEmailBlur();
     handleTelephoneBlur();
     handleMessageBlur();
-    emailjs.sendForm('service_cb7mkz8', 'template_rycht7c', form.current, 'p8JsVRCVhWp7ns37L')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-  
-    // Sprawdzenie, czy nie ma żadnych błędów walidacji
-    if (!nameError && !surnameError && !emailError && !telephoneError && !messageError) {
-      // Dane są poprawne, można je zbierać
-      const formData = {
-        name,
-        surname,
-        email,
-        telephone,
-        message,
-      };
 
-      setName("");
-      setEmail("");
-      setSurname("");
-      setTelephone("");
-      setMessage("");
-      // Tutaj możesz przesłać dane na serwer, zapisać w bazie danych lub wykonać inne operacje
-      console.log("Formularz przesłany poprawnie!");
-      console.log("Dane formularza:", formData);
+    // Sprawdzenie, czy nie ma żadnych błędów walidacji i czy żadne pole nie jest puste
+    if (!nameError && !surnameError && !emailError && !telephoneError && !messageError && name && surname && email && telephone && message) {
+        // Dane są poprawne, można je zbierać
+
+        const formData = {
+            name,
+            surname,
+            email,
+            telephone,
+            message,
+        };
+        
+        // Wysyłanie formularza za pomocą EmailJS
+        emailjs.sendForm('service_cb7mkz8', 'template_rycht7c', form.current, 'p8JsVRCVhWp7ns37L')
+        .then((result) => {
+            console.log("Wysłano pomyślnie:", result.text);
+            if (result.text === "OK") {
+                showModal();
+            }
+        }, (error) => {
+            console.error("Błąd podczas wysyłania:", error.text);
+        });
+
+    } else {
+        console.log("Formularz zawiera błędy lub puste pola. Nie można go wysłać.");
+        // Możesz również dodać logikę do obsługi błędów lub wyświetlenia odpowiednich komunikatów dla użytkownika.
     }
-  };
+};
 
 
-  
-  
-  
-  
+
   
 
   return (
     <>
+     {showPopup && <div className="background-overlay" />}
+
         <form className="contact-form" onSubmit={handleSubmit} ref={form}>
           <h2 className="ContactFormHeading">Wyceń renowację swoich grzejników!</h2>
           <div className="formgroup">
@@ -268,10 +290,17 @@ const ContactForm = () => {
             <span style={{ color: "red" }}>{messageError}</span>
           </div>
 
-          <button className="custom-submit-button button" type="submit" data-button="true">
+          <button 
+          className="custom-submit-button button" type="submit" data-button="true">
             Wyślij zapytanie
           </button>
         </form>
+
+        <Modal className="extraClass" visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}  footer={null}>
+            <h3>Dziękujemy, formularz został przesłany poprawnie!</h3>
+      </Modal>
+
+
       
     </>
   );

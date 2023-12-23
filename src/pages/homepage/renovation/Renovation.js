@@ -25,7 +25,7 @@ const RenovationSection = () => {
             zalecana jest renowacja, która pozwoli Ci przywrócić grzejnik do
             pełnej sprawności oraz nada mu nowy, niepowtarzalny wygląd.
           </div>
-          <a href="/pl/renovation">
+          <a href="/renowacja">
             <button className="RenovationSection-button button" type="button">
               Dowiedz się więcej 
             </button>

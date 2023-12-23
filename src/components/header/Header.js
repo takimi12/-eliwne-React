@@ -130,7 +130,7 @@ function Products() {
   if (pathSegments.length > 2 || pathSegments.includes('biznes') || location.pathname === '/') {
     isMenuHomepage = true;
   } else {
-    isMenuOther = pathSegments.includes('produkty') || pathSegments.includes('renowacja') || pathSegments.includes('Opinie') || pathSegments.includes('kontakt') || pathSegments.includes('produkt');
+    isMenuOther = pathSegments.includes('produkty') || pathSegments.includes('renowacja') || pathSegments.includes('opinie') || pathSegments.includes('kontakt') || pathSegments.includes('produkt');
   }
   
   const headerClassName = `${isMenuHomepage ? styles.menuBlack : ''} ${isMenuOther ? styles.menuWhite : ''}`;

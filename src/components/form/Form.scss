@@ -9,6 +9,7 @@
 .customtextarea {
   background-color: #fff; 
   outline: NONE;
+  width: 100%;
 }
 
 
@@ -137,4 +138,17 @@ margin-bottom: 8px;
 
 textarea { 
 resize: none;
+}
+
+
+.extraClass
+{
+   .ant-modal-body{
+  min-width: 300px!important;
+    min-height: 300px!important;
+    text-align: center!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+}
 }

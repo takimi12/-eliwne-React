@@ -26,7 +26,7 @@ const Clients = () => {
         </div>
         <div className="right">
           <h6 className="h6 ">
-            <a className="extra" href="/">
+            <a className="extra" href="/opinie">
               Zobacz wszystkie
             </a>
           </h6>
