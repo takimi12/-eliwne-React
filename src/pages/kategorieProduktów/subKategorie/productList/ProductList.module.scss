@@ -5,3 +5,37 @@
       margin-top: 150px;
       }
 }
+
+.products{
+  padding: 0px 40px;
+  margin-top: 350px;
+  .parentList{
+    display: flex;
+    gap: 25px;
+    @media screen and (max-width: 801px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .imageWraper{
+      @media screen and (max-width: 801px) {
+        width: 100%;
+
+          }
+    img{
+    width: 340px;
+      @media screen and (max-width: 801px) {
+    width: 100%;
+    max-width: 75%;
+    display: flex;
+    margin: auto;
+      }
+    }
+    h5{
+
+      @media screen and (max-width: 801px) {
+        text-align: center;
+      }
+    }
+  }
+  }
+}

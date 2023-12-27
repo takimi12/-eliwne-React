@@ -1,8 +1,41 @@
-.title{
-    padding: 40px 0 0 40px;
-    
-    @media screen and (max-width: 801px) {
-        padding: 0 0 0 16px;
-      margin-top: 150px;
-      }
+
+.sectionProduct{
+  padding: 0px 40px;
+  @media screen and (max-width: 800px) {
+    margin-top: 150px;
+  }
+  .title{
+    padding: 0;
+    margin-bottom: 10px;
+
+    }
+
 }
+
+.productsWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .produkty
+  {
+    padding-bottom: 70px;
+    max-width: 48%;
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+      padding-bottom: 40px;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+      }
+  
+  }
+  }
+
+    h5{
+      margin-top: 10px;
+      @media screen and (max-width: 768px) {
+   font-size: 18px;
+        }
+    }
+

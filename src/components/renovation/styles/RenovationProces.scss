@@ -5,8 +5,11 @@
 
 
 .RenovationPageInfo .MainSectionHeading {
-padding: 72px 0px 64px 0px;
-}
+    padding: 72px 0px 64px 0px;
+    @media only screen and (max-width: 767px) {
+        padding: 72px 16px 64px 16px;
+    }
+    }
 .RenovationPageInfo .MainHeading {
 padding: 14px 0px 14px 0px;
 }
@@ -34,14 +37,7 @@ object-fit: cover;
 }
 
 
-.RenovationPage {
-display: flex;
-padding-right: 112px;
-padding-left: 112px;
-padding-top: 88px;
-justify-content: space-around;
 
-}
 
 
 @media screen and (max-width: 1200px) {

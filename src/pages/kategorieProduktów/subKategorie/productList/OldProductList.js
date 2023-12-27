@@ -10,17 +10,19 @@ const ProductOneCategorySub = () => {
   const [categoryName, setCategoryName] = useState('');
   const [productsName, setProductsName] = useState('');
 
+//http://localhost:1337/api/series?populate=Zeliwne.Emmeline.Image
+//Zeliwne categoryName
+//ProductList.js:14 Emmeline productsName
+//http://localhost:1337/api/series?populate=Stalowe.Sem.Image
+//Stalowe categoryName
+//ProductList.js:14 Stalowy1 productsName
 
 const currentPath = window.location.pathname;
 const segments = currentPath.split('/').filter(segment => segment !== '');
 const lastSegment = segments[segments.length - 1];
 
-useEffect(() => {
-  if (!subcategories) {
-    // Jeśli selectedCategory jest puste, użyj lastSegment
-    fetchSubcategories(lastSegment);
-  }
-}, [])
+console.log(subcategories)
+
 
 const fetchSubcategories = () => {
 
@@ -32,29 +34,40 @@ const fetchSubcategories = () => {
     .catch((error) => console.error('Błąd podczas pobierania danych:asadadadasd ', error));
 };
 
-console.log(subcategories)
+
 
 
   return (
     <>
     <Breadcrumbs myProp="active" />
+    <div>
+      <h1 className={styles.title}>Subkategorie</h1>
       <section className={styles.products}>
-      
+        <div>
         {subcategories ? (
   subcategories.map((subcategory) => (
     <div key={subcategory.id}>
-      {subcategory.attributes.seria.map((serie) => (
-        <div key={serie.id} className={styles.parentList}>
-          {serie[lastSegment] && serie[lastSegment].map((item) => (
-            <div key={item.id} className={styles.imageWraper}>
-              <img
-                src={`http://localhost:1337${item.Image.data.attributes.formats.thumbnail.url}`}
-                alt={item.Title} />
-             <h5>{item.Title}</h5>
-            </div>
-          ))}
-        </div>
-      ))}
+      {subcategory.attributes[categoryName] ? (
+        subcategory.attributes[categoryName].map((zeliwneItem) => (
+          <div key={zeliwneItem.id}>
+            {zeliwneItem[productsName] ? (
+              zeliwneItem[productsName].map((emmelineItem) => (
+                <div key={emmelineItem.id}>
+                  {emmelineItem.Title}
+                  <img
+        src={`http://localhost:1337${emmelineItem.Image.data.attributes.formats.thumbnail.url}`}
+        alt={emmelineItem.Title}
+      />
+               </div>
+              ))
+            ) : (
+              <div>Missing Emmeline</div>
+            )}
+          </div>
+        ))
+      ) : (
+        <div>Missing Zeliwne</div>
+      )}
     </div>
   ))
 ) : (
@@ -62,8 +75,9 @@ console.log(subcategories)
 )}
 
 
-
+        </div>
       </section>
+    </div>
 
 
 {/* <Series /> */}

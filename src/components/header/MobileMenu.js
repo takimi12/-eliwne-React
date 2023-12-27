@@ -55,6 +55,30 @@ function MobileMenu(props) {
     setIcon(false);
   };
 
+  
+
+  useEffect(() => {
+    // ... kod pobierania danych ...
+
+    window.addEventListener('scroll', handleScroll); // Dodaj nasłuchiwanie przewijania strony
+
+    return () => {
+      // Usuń nasłuchiwanie zdarzenia po odmontowaniu komponentu
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    // Sprawdź pozycję przewinięcia i ustaw stan "isFixed" w zależności od tego, czy przewinięcie wynosi co najmniej 100px
+    if (window.scrollY >= 100) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+  };
+
+
+
   return (
     <>
       <div className={`${styles.position} ${isFixed ? styles.fixed : ''}`}>
@@ -98,7 +122,7 @@ function MobileMenu(props) {
                 {menus.map((menuItem) => (
                   <li key={menuItem.id}>
                     {menuItem.attributes.children.data.map((child) => (
-                      <div key={child.id}><h2 className={styles.mobileSubCategoryMenu}><a href={child.attributes.url}>{child.attributes.title}</a></h2></div>
+                     <h2 className={styles.mobileSubCategoryMenu}><a href={child.attributes.url}>{child.attributes.title}</a></h2>
                     ))}
                   </li>
                 ))}

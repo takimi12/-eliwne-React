@@ -1,0 +1,7 @@
+  .swiper-nav-btns button {
+    background-color: transparent!important;
+  }
+  
+    .swiper-nav-btns button:nth-child(1) img {
+    transform: rotate(180deg)!important;
+  }

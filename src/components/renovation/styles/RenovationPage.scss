@@ -4,6 +4,33 @@
     padding-left: 112px;
     padding-top: 88px;
     justify-content: space-around;
+    @media only screen and (max-width: 1199px) {
+        flex-direction: column;
+
+        .RenovationColumWrapper:nth-child(1){
+            order: 2;
+            .RenovationPageText{
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .RenovationColumWrapper:nth-child(2){
+            order: 1;
+            img{
+                width: 100%;
+            }
+        }
+      }
+      @media only screen and (max-width: 991px) {
+        padding-top: 90px;
+        flex-direction: column;
+padding-left: 16px;
+padding-right: 16px;
+
+
+}
+   
+     
 }
 
 
@@ -21,6 +48,9 @@
     max-width: 254px;
     text-align: center;
     padding-bottom: 120px;
+    @media only screen and (max-width: 600px) {
+        max-width: 100%;
+    }
 }
 
 

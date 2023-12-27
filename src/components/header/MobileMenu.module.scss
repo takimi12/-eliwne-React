@@ -16,7 +16,7 @@
   background-color: transparent;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   .menuBlack {
     svg {
@@ -65,6 +65,8 @@
   top: 0px;
   background: #fff;
   z-index: 11;
+  max-height: 700px;
+  overflow: scroll;
 .position{
   background-color: #fff;
 }
@@ -106,12 +108,10 @@
 
 .mobileSubCategory {
   padding: 40px;
+}
 
-  .mobileSubCategoryMenu {
-    padding: 24px 0;
-  }
-
- 
+.mobileSubCategoryMenu {
+  padding: 24px 0;
 }
 
 .SubCategoryProducts {
@@ -120,8 +120,9 @@
 
 }
 .MenuLeftSideParentActive{
-  min-height: 550px;
-  background: #fff;
+    top: -150px;
+    min-height: 1000px;
+    background: #fff;
     top: -150px;
 }
 .MenuLeftSideParent{

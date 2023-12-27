@@ -7,7 +7,6 @@ import SubKategorie from "./pages/kategorieProduktów/subKategorie/Kategorie";
 import ListaProduktów from "./pages/kategorieProduktów/subKategorie/productList/ProductList";
 import ProduktDetail from "./pages/kategorieProduktów/subKategorie/productList/ProductPage/Products";
 import NotFound from "./pages/notFound/NotFound";
-import { CategoryProvider } from './CategoryContext';
 import Header from "./components/header/Header";
 
 // pages
@@ -15,35 +14,26 @@ import Renowacja from "./pages/renowacja/Renowacja";
 import Biznes from "./pages/biznes/Biznes";
 import Opinie from "./pages/Opinie/Opinie";
 import Kontakt from "./pages/contacrt/Contact";
-import MobileMenu from "./components/header/MobileMenu";
-
-
 
 const App = () => {
   return (
     <>
 
+          <Header />
 
-       <CategoryProvider>
-      <Router>
-      <Header />
-
-        <Routes>
-        <Route path='/' element={<Homepage />} />
-  <Route path='/produkty' element={<KategorieProduktów />} />
-  <Route path='/produkty/:tytul' element={<SubKategorie />} />
-  <Route path='/produkty/:tytul/:tytul' element={<ListaProduktów />} />
-  <Route path='/produkt/:tytul' element={<ProduktDetail />} />
-  <Route path='/renowacja' element={<Renowacja />} />
-  <Route path='/biznes' element={<Biznes />} />
-  <Route path='/opinie' element={<Opinie />} />
-  <Route path='/kontakt' element={<Kontakt />} />
-  <Route path="/*" element={<NotFound />} />
-        </Routes>
-        
-      </Router>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/produkty' element={<KategorieProduktów />} />
+            <Route path='/produkty/:kategoria' element={<SubKategorie />} />
+            <Route path='/produkty/:kategoria/:podkategoria/:api' element={<ListaProduktów />} />
+            <Route path='/produkt/:tytul' element={<ProduktDetail />} />
+            <Route path='/renowacja' element={<Renowacja />} />
+            <Route path='/biznes' element={<Biznes />} />
+            <Route path='/opinie' element={<Opinie />} />
+            <Route path='/kontakt' element={<Kontakt />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
       <Footer />
-      </CategoryProvider>
     </>
   );
 };

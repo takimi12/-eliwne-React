@@ -10,6 +10,9 @@ import  slidesData  from "./data/AdsBottomData";
 
 const RenovationAdsBottom = () => {
   const breakpoints = {
+    400: {
+      slidesPerView: 1,
+    },
     600: {
       slidesPerView: 1,
     },

@@ -6,6 +6,16 @@
     height: 100px;
     width: 100%;
     z-index: 1;
+    background-color: #fff;
+
+    svg{
+        path{
+            fill:black;
+        }
+    }
+    a{
+        color:#000;
+    }
     .menuWhite{
     a{
         color:#000;
@@ -50,7 +60,7 @@
            li {
                padding: 10px;
                a{
-                   color: #fff;
+                   color: #000;
                }
            }
        }
@@ -96,7 +106,6 @@
 **/
 .fixed{
     .menuBlack{
-        color: red;
         svg{
             path{
                 fill:black;
@@ -114,3 +123,16 @@
 -homepage
 -biznes
 **/
+
+
+/***Hover big menu ***/
+.position{
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+}
+
+.active12{
+    opacity: 1;
+    z-index: 12;
+}

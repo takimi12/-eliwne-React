@@ -1,55 +1,53 @@
+// Products.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCategory } from '../../CategoryContext'; // Zaimportuj useCategory z odpowiedniej ścieżki
+import { useDispatch } from 'react-redux'; // Importuje funkcję useDispatch z react-redux
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import styles from './Products.module.scss';
+import { setSelectedCategory } from '../../redux/actions'; // Importuje akcję setSelectedCategory
 
 function Products() {
-  const { setSelectedCategory } = useCategory(); // Użyj hooka useCategory, aby pobrać funkcję setSelectedCategory
+  const dispatch = useDispatch(); // Inicjalizuje useDispatch
+
   const [categories, setCategories] = useState([]);
 
-
-
-  
   useEffect(() => {
     // Twój kod do wykonywania żądania HTTP i pobierania danych
-    const headers = {
-      Authorization: 'Bearer 9c33c0093885fbe25d1cb8855299d2102449b54e040ef81446c7fd770a52933f51003b3c6287fbabe9d8a23f258e8f18ebbc6ec6732edebe8611b66c643d8f6371b70874e152cfa7db1fcfb0c0e4d934da3e2babc6ebb499df2cb80769478eae5bb2084781913739096e0ae2759a38a5497ec4ed0cdd9c3045490ddd688793fc',
-    };
-
-    fetch('https://api.naukastrapi.pl/api/kategorie-grzejnikows?populate=*', {
+    fetch('http://localhost:1337/api/kategorie-grzejnikows?populate=Kategorie.Image', {
       method: 'GET',
-      headers: headers,
     })
       .then((response) => response.json())
       .then((data) => setCategories(data.data))
       .catch((error) => console.error('Błąd podczas pobierania danych: ', error));
   }, []);
 
+  const handleCategoryClick = (selectedCategory) => {
+    // Wywołuje akcję Redux po kliknięciu w link
+    dispatch(setSelectedCategory(selectedCategory));
+  };
+
   return (
     <>
-    <Breadcrumbs />
-      <h4 className={styles.title}>Produkty</h4>
-   
-      <section >
-        <div>
+      <Breadcrumbs />
+
+      <section className={styles.sectionProduct}>
+        <h4 className={styles.title}>Produkty</h4>
+
+        <div className={styles.productsWrapper}>
           {categories.map((category) => (
-          
             <Link
-              to={`/produkty/${category.attributes.Api}`}
-              className='produkty'
-              onClick={() => setSelectedCategory(category.attributes.Api)}
+              to={`/produkty/${category.attributes.Kategorie.Api}`}
+              className={styles.produkty}
+              onClick={() => handleCategoryClick(category.attributes.Kategorie.Api)}
               key={category.id}
             >
-              <li>
-                <img src={`https://api.naukastrapi.pl${category.attributes.Obrazek.data.attributes.url}`} alt="Obrazek kategorii" />
-                <h4>{category.attributes.Tytul}</h4>
-              </li>
+              <img src={` http://localhost:1337${category.attributes.Kategorie.Image.data.attributes.url}`} alt="zdjęcie" />
+              <h5>{category.attributes.Kategorie.Title}</h5>
             </Link>
           ))}
         </div>
       </section>
-     </>
+    </>
   );
 }
 

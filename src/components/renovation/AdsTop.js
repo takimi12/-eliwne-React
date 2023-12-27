@@ -8,6 +8,9 @@ import { slides } from "./data/AdsTopData";
 
 const RenovationAdsBottom = () => {
   const breakpoints = {
+    400: {
+      slidesPerView: 1,
+    },
     600: {
       slidesPerView: 1,
     },
@@ -22,13 +25,6 @@ const RenovationAdsBottom = () => {
     },
   };
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">  </span>';
-    },
-  };
-
   return (
     <section className="RenovationPageInfoAdvantages">
       <h4 className="RenovationMainHeading h4">Odnów swoje grzejniki w 4&nbsp; prostych krokach</h4>
@@ -37,10 +33,10 @@ const RenovationAdsBottom = () => {
           spaceBetween={20}
           slidesPerView={4}
           slidesOffsetBefore={40}        
-          pagination={pagination}
           modules={[Pagination]}
           className="mySwiper"
           breakpoints={breakpoints}
+          pagination={{ clickable: true }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>

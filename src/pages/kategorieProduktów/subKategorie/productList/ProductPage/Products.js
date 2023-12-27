@@ -7,14 +7,13 @@ import post from "../../../../../static/ProductPage/postproductpage.svg";
 import car from "../../../../../static/ProductPage/cardeliver.svg";
 
 
-import { useCategory } from '../../../../../CategoryContext';
 import FutureSection from "../../../../homepage/FutureSection/FutureSection";
 import ProductPageFlorence from "../../../../../components/productPage/ProductPageFlorence";
 import ProductPagePopup from "../../../../../components/productPage/ProductPagePopUp";
 import Breadcrumbs from "../../../../../components/breadcrumbs/breadcrumbs";
 
 const ProductPageSingle = () => {
-  const {setProduct } = useCategory();
+
   const [subcategories, setSubcategories] = useState(null);
 
   
@@ -24,15 +23,6 @@ const ProductPageSingle = () => {
   
 
 
-  useEffect(() => {
-    if (!setProduct) {
-      // Jeśli selectedCategory jest puste, użyj lastSegment
-      fetchSubcategories(lastSegment);
-    } else {
-      // W przeciwnym razie, użyj selectedCategory
-      fetchSubcategories(setProduct);
-    }
-  }, [setProduct]);
 
   const fetchSubcategories = (category) => {
     const headers = {
