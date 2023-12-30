@@ -9,16 +9,22 @@ function Products() {
   const [subcategories, setSubcategories] = useState(null);
 
   const currentPath = window.location.pathname;
-  const segments = currentPath.split('/').filter(segment => segment !== '');
-  const lastSegment = segments[segments.length - 1];
+  let segments = currentPath.split('/').filter(segment => segment !== '');
+  let lastSegment = segments[segments.length - 1];
+
+  const [currentPath1, setCurrentPath1] = useState('');
+
+
 
   useEffect(() => {
     if (!subcategories) {
-      // Jeśli selectedCategory jest puste, użyj lastSegment
+      if (lastSegment.endsWith('y')) {
+        lastSegment = lastSegment.slice(0, -1) + 'ie';
+      }
+    
       fetchSubcategories(lastSegment);
     }
   }, [])
-
 
   const fetchSubcategories = (category) => {
     fetch(`http://localhost:1337/api/${category}s?populate=Kategoria.Obrazek`, {
@@ -29,7 +35,12 @@ function Products() {
       .catch((error) => console.error('Błąd podczas pobierania danych: ', error));
   };
 
-  console.log(subcategories, 'subkategoria')
+
+
+  const handleSubCategoryClick = (title) => {
+    setCurrentPath1(title);
+  };
+
 
   return (
     <>
@@ -46,7 +57,7 @@ function Products() {
             subcategories.map((subcategory) => (
            <>     
               <Link
-              to={`/produkty/${lastSegment}/${subcategory.attributes.Kategoria.Title}/${subcategory.attributes.Kategoria.Api}`}
+              to={`/produkty/${subcategory.attributes.Kategoria.ApiTitle}/${subcategory.attributes.Kategoria.Title}`}
               className={styles.produkty}
               key={subcategory.id}
             >
@@ -63,7 +74,7 @@ function Products() {
         </div>
       </section>
 
-            <Series />
+            <Series  onCategoryClick={handleSubCategoryClick } />
  
      </>
   );

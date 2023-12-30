@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Featured = () => {
   return (
@@ -8,7 +9,7 @@ const Featured = () => {
           
           <h3 className="display-second">Nowa seria Neptune
 podkreślająca styl Twojego wnętrza</h3>
-          <button className=" button" ><a >Zobacz serię Emmeline</a></button>
+          <button className=" button" ><Link to="/produkty/Zeliwne/Emmeline">Zobacz serię Emmeline</Link></button>
         </div>
       </div>
 </section>  

@@ -34,6 +34,7 @@ function MobileMenu(props) {
     fetchData();
   }, []);
 
+
   const handleHamburgerClick = () => {
     setIsHamburgerActive(true);
     setIsthirdLevelActive(false);
@@ -58,18 +59,15 @@ function MobileMenu(props) {
   
 
   useEffect(() => {
-    // ... kod pobierania danych ...
 
-    window.addEventListener('scroll', handleScroll); // Dodaj nasłuchiwanie przewijania strony
+    window.addEventListener('scroll', handleScroll); 
 
     return () => {
-      // Usuń nasłuchiwanie zdarzenia po odmontowaniu komponentu
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const handleScroll = () => {
-    // Sprawdź pozycję przewinięcia i ustaw stan "isFixed" w zależności od tego, czy przewinięcie wynosi co najmniej 100px
     if (window.scrollY >= 100) {
       setIsFixed(true);
     } else {
@@ -107,15 +105,15 @@ function MobileMenu(props) {
                 {menus.map((menuItem) => (
                   <li key={menuItem.id} className={styles[`mobileCategory-${menuItem.id}`]}>
                     <h2 className={styles.mobileCategoryMenu}><a href={menuItem.attributes.url}>{menuItem.attributes.title}</a></h2>
-                    {menuItem.id === 26 && <RiArrowRightLine className={styles.arrow} size={35} onClick={handlethirdLevelClick} />}
+                    {menuItem.id === 2 && <RiArrowRightLine className={styles.arrow} size={35} onClick={handlethirdLevelClick} />}
                   </li>
                 ))}
               </ul>
             </div>
             <div className={`${styles.subCategoryBack} ${isthirdLevelActive ? styles.active : ''}`}>
-              <div className={styles.backArrow}>
+              <div className={styles.backArrow} onClick={handleBack}>
                 <AiOutlineArrowLeft size={30} className={styles.subCategoryBackArrow} />
-                <h3 onClick={handleBack}>Powrót</h3>
+                <h3 >Powrót</h3>
               </div>
               <h5 className={styles.subCategoryProdukty}>Produkty</h5>
               <ul>

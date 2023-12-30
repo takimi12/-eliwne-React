@@ -14,7 +14,6 @@ function Products() {
   const [articles, setArticles] = useState([]);
 
 
-
   const imageMappings = {}; // Inicjalizuj pusty obiekt
 
   articles.forEach((article) => {
@@ -23,12 +22,8 @@ function Products() {
 
 
 
-
-
-
-
   useEffect(() => {
-    fetch('http://localhost:1337/api/menu-zdjecias?populate=*', {
+    fetch('http://localhost:1337/api/menutops?populate=*', {
       method: 'GET',
     })
       .then((response) => response.json())
@@ -51,7 +46,8 @@ function Products() {
       .then((data) => {
         setMenus(data.data.attributes.items.data);
         const produktyItem = data.data.attributes.items.data.find(
-          (item) => item.id === 26
+          (item) => item.id === 2,
+       
         );
         if (produktyItem) {
           const parentItemsWithChildren = produktyItem.attributes.children.data.map((parent) => ({
@@ -70,7 +66,7 @@ function Products() {
   };
 
   const handleMouseEnterFirst = (menuItem)  => {
-    if(menuItem=== 26) {
+    if(menuItem=== 2) {
       setIsMultiMenuVisible(true);
     } else {
       setIsMultiMenuVisible();
@@ -96,7 +92,7 @@ function Products() {
     if (childItemTitle in imageMappings) {
       return imageMappings[childItemTitle];
     }
-    return '/uploads/navikaloryfer_b793861022.svg'; // lub inny domyślny URL
+    return '/uploads/navikaloryfer_a752835c85.svg'; // lub inny domyślny URL
   };
 
   const [isFixed, setIsFixed] = useState(false);
@@ -221,7 +217,7 @@ function Products() {
             </div>
 
             <div className='placetoimage'>
-              <img src={`http://localhost:1337${getActiveImage()}`} alt={childItemTitle} />
+              <img className='placetoImageContent' src={`http://localhost:1337${getActiveImage()}`} alt={childItemTitle} />
             </div>
           </div>
         </div>

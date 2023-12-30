@@ -9,12 +9,10 @@ import car from "../../../../../static/ProductPage/cardeliver.svg";
 import FutureSection from "../../../../homepage/FutureSection/FutureSection";
 import ProductPageFlorence from "../../../../../components/productPage/ProductPageFlorence";
 import ProductPagePopup from "../../../../../components/productPage/ProductPagePopUp";
-import { SwiperNavButtons } from "../../../../homepage/inspiration/helpers/SwiperNavButtons";
 
 const ProductPageSingle = () => {
   const [subcategories, setSubcategories] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-
 
 
   const currentPath = window.location.pathname;
@@ -26,8 +24,6 @@ const ProductPageSingle = () => {
       fetchSubcategories(lastSegment);
     }
   }, []);
-
-
 
   const fetchSubcategories = (category) => {
     fetch(`http://localhost:1337/api/produkts?populate=${category}.Foto.BigFoto`, {
@@ -86,7 +82,8 @@ const ProductPageSingle = () => {
                 768: {
                   slidesPerView: 1,
                 },
-               }}
+                // Dodaj dodatkowe breakpoints, jeśli chcesz dostosować liczbę slajdów dla innych szerokości ekranu
+              }}
             >
               {subcategory.attributes.Emmeline2kolumny.map((item) => (
                
@@ -109,10 +106,8 @@ const ProductPageSingle = () => {
                   </div>
                 
               ))}
-              <div className={styles.mobileArrows}>
-                         <p>Numer slajdu:   {currentSlide + 1} z {subcategory.attributes.Emmeline2kolumny[0].Foto[0].BigFoto.data.length}</p>
-                         <SwiperNavButtons />
-                         </div>
+                         <p>Numer slajdu:  Numer slajdu: {currentSlide + 1} z {subcategory.attributes.Emmeline2kolumny[0].Foto[0].BigFoto.data.length}</p>
+ 
             </Swiper>
             </div>
             <div className={styles.rightSection}>

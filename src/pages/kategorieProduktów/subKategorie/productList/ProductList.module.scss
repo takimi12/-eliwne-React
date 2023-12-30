@@ -9,9 +9,8 @@
 .products{
   padding: 0px 40px;
   margin-top: 350px;
-  .parentList{
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
     @media screen and (max-width: 801px) {
       flex-direction: column;
       align-items: center;
@@ -38,4 +37,3 @@
     }
   }
   }
-}

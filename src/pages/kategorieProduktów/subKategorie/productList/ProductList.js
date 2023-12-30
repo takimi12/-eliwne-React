@@ -1,77 +1,81 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
 import Breadcrumbs from "../../../../components/breadcrumbs/breadcrumbs";
 import styles from './ProductList.module.scss';
+import Series from "../../../../components/series/Series";
 
 const ProductOneCategorySub = () => {
-
   const [subcategories, setSubcategories] = useState(null);
-  const [categoryName, setCategoryName] = useState('');
-  const [productsName, setProductsName] = useState('');
+  const [apiValues, setApiValues] = useState(null);
 
 
-const currentPath = window.location.pathname;
-const segments = currentPath.split('/').filter(segment => segment !== '');
-const lastSegment = segments[segments.length - 1];
+  const currentPath = window.location.pathname;
+  let segments = currentPath.split('/').filter(segment => segment !== '');
+  let lastSegment = segments[segments.length - 1];
+const [currentPath1, setCurrentPath1] = useState(null);
+
+
 
 useEffect(() => {
-  if (!subcategories) {
-    // Jeśli selectedCategory jest puste, użyj lastSegment
-    fetchSubcategories(lastSegment);
+  if (currentPath1 !== null) {
+    lastSegment = currentPath1;
+    if (lastSegment.endsWith('y')) {
+      lastSegment = lastSegment.slice(0, -1) + 'ie';
+    }
+    fetchSubcategories();
+  } else {
+    if (!subcategories) {
+     
+      fetchSubcategories();
+    }
   }
-}, [])
+  window.scrollTo(0, 0);
+}, [currentPath1]); 
 
-const fetchSubcategories = () => {
+  const fetchSubcategories = () => {
+    fetch(`http://localhost:1337/api/${lastSegment}s?populate=Image`, {
+      method: 'GET',
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setSubcategories(data.data);
+        const apiValues = data.data.map(subcategory => subcategory.attributes.Api || null);
+        setApiValues(apiValues);
+      })
+      .catch((error) => {
+        console.error('Błąd podczas pobierania danych:', error);
+        // Tutaj możesz dodać kod obsługi błędów, np. wyświetlanie komunikatu dla użytkownika
+      });
+  };
 
-   fetch(`  http://localhost:1337/api/series?populate=seria.${lastSegment}.Image`, {
-    method: 'GET',
-  })
-    .then((response) => response.json())
-    .then((data) => setSubcategories(data.data))
-    .catch((error) => console.error('Błąd podczas pobierania danych:asadadadasd ', error));
-};
-
-console.log(subcategories)
+  const handleCategoryClick = (title) => {
+    setCurrentPath1(title);
+  };
 
 
   return (
     <>
-    <Breadcrumbs myProp="active" />
+      <Breadcrumbs myProp="active" />
       <section className={styles.products}>
       
-        {subcategories ? (
-  subcategories.map((subcategory) => (
-    <div key={subcategory.id}>
-      {subcategory.attributes.seria.map((serie) => (
-        <div key={serie.id} className={styles.parentList}>
-          {serie[lastSegment] && serie[lastSegment].map((item) => (
-            <div key={item.id} className={styles.imageWraper}>
-              <img
-                src={`http://localhost:1337${item.Image.data.attributes.formats.thumbnail.url}`}
-                alt={item.Title} />
-             <h5>{item.Title}</h5>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  ))
-) : (
-  <div>Loading...</div>
-)}
-
-
-
+        {subcategories && subcategories.map((subcategory) => (
+          <div key={subcategory.id} className={styles.parentList}>
+            <div className={styles.singleProduct}>
+            <img
+              src={`http://localhost:1337${subcategory.attributes.Image.data[0].attributes.url}`}
+            />
+            <h5>{subcategory.attributes.Title}</h5>
+          </div>
+          </div>
+        ))}
       </section>
-
-
-{/* <Series /> */}
-
-
-
+      <Series apiValues={apiValues}  onCategoryClick={handleCategoryClick} />
     </>
   );
-  };
-  
-  export default ProductOneCategorySub; 
+};
+
+export default ProductOneCategorySub;

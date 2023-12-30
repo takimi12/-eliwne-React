@@ -15,6 +15,7 @@ import third from "../../../static/HomePage/third-main-photo.png";
 import fourth from "../../../static/HomePage/fourth-main-photo.png";
 import five from "../../../static/HomePage/five-main-photo.png";
 import arrow from "../../../static/HomePage/Arrows.png";
+import { Link } from "react-router-dom";
 
 const SectionSwiper = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -145,7 +146,7 @@ const SectionSwiper = () => {
                   </div>
                 </div>
                 <div className="buttonwraper">
-                  <button><a href="#">Zobacz produkt</a></button>
+                  <Link to="/produkty/Zeliwne/Grace"><button>Zobacz produkt</button></Link>
                 </div>
                 <div className="ConfigurationUnder900" onClick={handleConfigurationClick}>
                   <h6 className="h6-600 clickunder900">

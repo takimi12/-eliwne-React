@@ -86,7 +86,7 @@
     }
     ul{
         li{
-            padding: 10px;
+            margin-bottom: 15px;
         }
     }
     .thirdLevel{
@@ -135,4 +135,14 @@
 .active12{
     opacity: 1;
     z-index: 12;
+}
+
+
+.placetoImageContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-height: 80%;
+    margin-top: 30px;
 }
